@@ -15,13 +15,12 @@
         <!-- TODO: Set Action and Method Properties -->
         <form method="POST" action="results.html">
             <div>
-                <label for="firstname">Your First Name<span class="required-field"></span></label>
-                <input type="text" id="firstname" name="firstname" required minlength="2" maxlength="35">
-                <!-- TODO: Create a "lastname" input with type "text" -->
-                <label for="lastname">Your Last Name<span class="required-field"></span></label>
-                <input type="text" id="lastname" name="lastname" required minlength="2" maxlength="35">
+                <label for="firstname">Your First Name<span class="required-field">*</span></label>
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
+                <label for="lastname">Your Last Name<span class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
                 <label for="age">Your Age</label>
-                <input type="number" id="age" name="age" minlength="21" maxlength="120">
+                <input type="number" id="age" name="age" min="21" max="120">
                     <h5>*Disclaimer: Must be age 21 years or older to enter*</h5>
             </div>
             <!-- TODO: Make fieldset and legend -->
@@ -42,7 +41,7 @@
                     <option value="NY">New York</option>
                 </select>
                 <label for="zip">Zip Code</label>
-                <input type="number" id="zip" name="zip"
+                <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code">
             </fieldset>
             <!-- TODO: Second fieldset -->
             <fieldset>
@@ -88,3 +87,5 @@
     </footer>
 </body>
 </html>
+
+<span class="required-field"></span>
